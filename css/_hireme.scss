@@ -1,0 +1,66 @@
+#hire_me {
+    height: 36rem;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../images/office-865091_1920.jpg") fixed center top no-repeat;
+    background-size: cover;
+    margin: 8rem 0;
+
+    .inner_hire {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 36rem;
+
+        .hire_title {
+            font-size: 2.4rem;
+            font-weight: 500;
+            margin-bottom: 2.2rem;
+            color: #fff;
+            letter-spacing: .1rem;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .button-anim {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: #E9204F;
+            padding: 1.1rem 4rem;
+            font-weight: 500;
+            border-radius: .5rem;
+            position: relative;
+            border: .1rem solid #E9204F;
+            overflow: hidden;
+            transition: all .4s;
+            z-index: 1;
+        }
+    }
+
+    .inner_hire .button-anim::before {
+        position: absolute;
+        content: "";
+        background: #E9204F;
+        height: 8rem;
+        width: 25rem;
+        left: -8.5rem;
+        top: -2rem;
+        -webkit-transition: all .4s;
+        transition: all .4s;
+        -webkit-transform: rotate(84deg);
+        transform: rotate(64deg);
+        transform-origin: left bottom;
+        -webkit-transform-origin: left bottom;
+        z-index: -1;
+    }
+
+    .button-anim:hover::before {
+        transform: rotate(0deg);
+    }
+
+    .button-anim:hover {
+        color: #fff !important;
+        border: .1rem solid transparent;
+    }
+}

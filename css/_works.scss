@@ -1,0 +1,151 @@
+#works_sec {
+    margin: 8rem 0;
+    background: rgba(0, 0, 0, 0.035);
+    padding: 10rem 0;
+
+    .collaps {
+        display: none;
+    }
+
+    .works_heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.8rem;
+
+        .work_element {
+
+            h3 {
+                font-size: 2.8rem;
+                position: relative;
+                color: #101010;
+                font-weight: 500;
+                margin-bottom: 2rem;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: .6rem;
+                    width: 4.5rem;
+                    background: #202020;
+                    top: 3.9rem;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    height: .2rem;
+                    width: 18rem;
+                    background: #202020;
+                    top: 4.1rem;
+                    left: 4.4rem;
+                }
+            }
+
+            span {
+                text-transform: uppercase;
+                color: #e9204f;
+                font-weight: 700;
+                font-size: 1.5rem;
+                margin-bottom: 1.8rem;
+                display: block;
+            }
+
+            // button amim already used in hireme.scss page
+            .btn_viewall {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 1.8rem;
+                color: #E9204F;
+                padding: 1.1rem 4rem;
+                font-weight: 500;
+                border-radius: .5rem;
+                position: relative;
+                border: .1rem solid #E9204F;
+                overflow: hidden;
+                transition: all .4s;
+                z-index: 1;
+            }
+
+            .btn_viewall::before {
+                position: absolute;
+                content: "";
+                background: #E9204F;
+                height: 8rem;
+                width: 25rem;
+                left: -8.5rem;
+                top: -2rem;
+                -webkit-transition: all .4s;
+                transition: all .4s;
+                -webkit-transform: rotate(84deg);
+                transform: rotate(64deg);
+                transform-origin: left bottom;
+                -webkit-transform-origin: left bottom;
+                z-index: -1;
+            }
+
+            .btn_viewall:hover::before {
+                transform: rotate(0deg);
+            }
+
+            .btn_viewall:hover {
+                color: #fff !important;
+                border: .1rem solid transparent;
+            }
+        }
+
+
+    }
+
+    .noContent {
+        pointer-events: none;
+
+    }
+
+    //   .works_sec .works_heading .work_element .button-anim.noContent:hover::before  {
+    //     width: 28.3rem !important;
+    // }
+
+    figure {
+        position: relative;
+        // this display none for view more toggle through jquery
+        display: none;
+
+        i.fa-search {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3.2rem;
+            margin: 0;
+            color: #fff;
+            visibility: hidden;
+            transition: .4s;
+            opacity: 0;
+        }
+    }
+
+    figure::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .4s;
+    }
+
+    figure:hover::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: rgba(248, 41, 89, 0.8);
+        opacity: 1;
+    }
+
+    figure:hover i.fa-search {
+        visibility: visible;
+        opacity: 1;
+        top: 50%;
+    }
+}

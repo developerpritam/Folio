@@ -1,0 +1,128 @@
+#latest_blog_sec {
+    margin: 8rem 0;
+
+    .blog_title {
+        margin: 3.2rem 0;
+
+        h3 {
+            font-size: 2.8rem;
+            position: relative;
+            color: #101010;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            
+            &:before {
+                position: absolute;
+                content: "";
+                height: .6rem;
+                width: 4.5rem;
+                background: #202020;
+                top: 3.9rem;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                height: .2rem;
+                width: 18rem;
+                background: #202020;
+                top: 4.1rem;
+                left: 4.4rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            margin: 0 0 2rem 0;
+            color: #101010;
+            font-weight: 500;
+        }
+    }
+
+    .blog {
+        transition: .4s;
+
+        figure {
+            overflow: hidden;
+        }
+
+        &:hover img {
+            transform: scale(1.07);
+        }
+
+        &:hover {
+            transform: translateY(-1.2rem);
+        }
+
+        img.img-fluid {
+            width: 100%;
+            height: 24.2rem;
+            object-fit: cover;
+            transition: .4s;
+        }
+
+        .blog_info {
+            background: #fff;
+            position: relative;
+            width: 93%;
+            bottom: 3.8rem;
+            margin: auto;
+            padding: 2rem 2.1rem;
+            box-shadow: 0 .2rem 1.5rem 0 rgba(0, 0, 0, 0.16);
+
+            .blog_date {
+                font-size: 1.4rem !important;
+                font-weight: 400 !important;
+                color: #fff;
+                position: absolute;
+                top: -2.9rem;
+                padding: .4rem .8rem;
+                left: 0;
+                background: #e9204f;
+            }
+
+            span {
+                font-size: 1.8rem;
+                font-weight: 600;
+                margin-bottom: 1.3rem;
+                display: inline-block;
+                color: #101010;
+            }
+
+            p {
+                font-size: 1.6rem;
+                line-height: 1.8;
+                margin-bottom: 2.6rem;
+                color: #101010;
+            }
+
+            a {
+                position: relative;
+                font-size: 1.6rem;
+                color: #e9204f;
+                text-decoration: none;
+                font-weight: 600;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: .2rem;
+                    width: 100%;
+                    background: red;
+                    top: 3.3rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    left: 0;
+                    transition: .3s !important;
+                }
+
+                &:hover::after {
+                    top: 2.2rem;
+                    visibility: visible;
+                    opacity: 1;
+
+                }
+            }
+        }
+    }
+}

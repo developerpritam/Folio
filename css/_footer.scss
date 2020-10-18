@@ -1,0 +1,186 @@
+footer {
+    margin: 10rem 0 0 0;
+
+    .contact_info {
+
+        h3 {
+            font-size: 2.8rem;
+            position: relative;
+            color: #101010;
+            font-weight: 500;
+            margin-bottom: 4rem;
+            
+            &:before {
+                position: absolute;
+                content: "";
+                height: .6rem;
+                width: 4.5rem;
+                background: #202020;
+                top: 3.9rem;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                height: .2rem;
+                width: 18rem;
+                background: #202020;
+                top: 4.1rem;
+                left: 4.4rem;
+            }
+        }
+
+        p.address {
+            display: block;
+            line-height: 1.7;
+            font-size: 1.6rem;
+            color: #101010;
+
+        }
+
+        .email {
+            display: block;
+            font-size: 1.6rem;
+            margin: 1.5rem 0;
+            color: #101010;
+        }
+
+        .phone_no {
+            display: block;
+            font-size: 1.6rem;
+            color: #101010;
+        }
+
+
+        .footer-social_media {
+            display: inline-block;
+            margin-top: 3rem;
+
+            & a {
+                display: inline-block;
+                font-size: 1.8rem;
+                margin: 0 .7rem;
+                color: #e9204f;
+                border: .1rem solid #e9204f;
+                border-radius: 50%;
+                width: 4rem;
+                height: 4rem;
+                line-height: 4rem;
+                text-align: center;
+                transition: .4s;
+
+                &:hover {
+                    transform: rotate(-360deg);
+                    color: #fff;
+                    background: #e9204f;
+                }
+            }
+
+            & a:first-child {
+                margin-left: 0;
+            }
+
+            & a:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+
+    }
+
+
+    form {
+        font-size: 1.6rem;
+        position: relative;
+
+        .main-input {
+            display: flex;
+            justify-content: space-between;
+
+            input[type="text"] {
+                width: 48%;
+                padding: .3rem .5rem;
+                border: 0;
+                border-bottom: .1rem solid grey;
+                outline: none;
+            }
+
+            input[type="email"] {
+                width: 48%;
+                padding: .3rem .5rem;
+                border: 0;
+                border-bottom: .1rem solid grey;
+                outline: none;
+            }
+        }
+
+        textarea {
+            border: 0;
+            border-bottom: .1rem solid grey;
+            width: 100%;
+            margin-top: 4rem;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #e9204f;
+        }
+
+        a.contact-btn {
+            position: absolute;
+            bottom: -8.6rem;
+            right: 0;
+            border-radius: .4rem;
+            background: #202020;
+            padding: 1.2rem 1rem 1.2rem 2.6rem;
+            text-decoration: none;
+            color: #fff !important;
+            transition: .3s;
+
+            &:hover {
+                background: #e9204f;
+            }
+
+            i.arrow_right {
+                font-size: 1.7rem;
+                margin-left: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .3s;
+            }
+
+            &.contact-btn:hover i.arrow_right {
+                margin-left: 1rem;
+                visibility: visible;
+                opacity: 1;
+            }
+
+        }
+    }
+
+    .footer_copyright {
+        margin: 8rem 0 0 0;
+        background: #202020;
+        padding: 2rem;
+
+        p {
+            text-align: center;
+            color: #fff;
+            font-size: 1.6rem;
+            margin: 0;
+
+            a {
+                text-decoration: none;
+                color: #e9204f;
+
+                &:hover {
+                    color: #e9204fc4 !important;
+                }
+            }
+        }
+    }
+
+}

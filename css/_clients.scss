@@ -1,0 +1,104 @@
+#clients_say {
+    margin: 8rem 0;
+
+    h3 {
+        font-size: 2.8rem;
+        position: relative;
+        color: #101010;
+        font-weight: 500;
+        margin-bottom: 4rem;
+        
+        &:before {
+            position: absolute;
+            content: "";
+            height: .6rem;
+            width: 4.5rem;
+            background: #202020;
+            top: 3.9rem;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            height: .2rem;
+            width: 18rem;
+            background: #202020;
+            top: 4.1rem;
+            left: 4.4rem;
+        }
+    }
+
+    .client {
+        margin: 1rem;
+        padding: 2rem 1.5rem;
+        box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.1);
+        border-radius: .5rem;
+    
+        .quote {
+    
+            i.fas.fa-quote-left {
+                margin: 0 auto;
+                display: block;
+                font-size: 2.5rem;
+                color: #e9204f;
+                text-align: center;
+            }
+        }
+    
+        .client_says {
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 1.7;
+    
+        }
+    
+        img.img-fluid.client-img {
+            margin: 0 auto;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    
+        .client_name {
+            display: block;
+            text-align: center;
+            margin: 1.5rem 0 .8rem 0;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    
+        span.client_country {
+            display: block;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+    }
+    
+    .slick-slide {
+        outline: none;
+    
+    }
+    
+    .slick-prev:before,.slick-next:before {
+        color: #e9204f;
+        font-size: 26px;
+    }
+
+    .slick-dots {
+        bottom: -60px;
+    }
+    
+    .slick-dots li button:before {
+        font-size: .6rem;
+        color: #e9204f;
+        bottom: 0;
+    }
+    
+    .slick-dots li .slick-active button:before {
+        opacity: .85;
+        color: #e9204f;
+    }
+}
+

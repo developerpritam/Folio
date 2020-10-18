@@ -1,0 +1,205 @@
+// laptop responsive
+@media(max-width: 1024px) {
+    header {
+        height: 80vh !important;
+
+        &::before {
+            right: 3rem !important;
+
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    // toggle nav start
+    ul#nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background: rgba(233, 32, 79, .8);
+        z-index: 99;
+        transform: translateX(100%);
+        transition: .4s ease-in-out;
+        justify-content: center;
+        align-items: center;
+        padding: 0 8rem;
+    }
+
+    .navAnim ul#nav li a {
+        color: #fff !important;
+    }
+
+    .navAnim ul li a::before {
+        background: #fff !important;
+    }
+
+    ul li {
+        font-size: 2rem !important;
+    }
+
+    .navAnim ul li {
+        font-size: 2rem !important;
+    }
+
+    ul li a::before {
+        top: 2.5rem !important;
+    }
+
+    // header nav #btn {
+    //     right: 78px !important;
+    // }
+
+    ul#nav.active {
+        transform: translateX(0);
+    }
+
+    #btn.active {
+        transform: translateX(-244px);
+
+    }
+    // toggle nav end
+
+    header nav {
+
+        #btn {
+            display: inline-block !important;
+            position: absolute;
+            right: 6rem;
+            transition: .4s ease-in-out;
+            position: fixed;
+            z-index: 99;
+        }
+    }
+
+    figure {
+        img.img-fluid.respon-size {
+            width: 100%;
+        }
+    }
+
+    header::before {
+        right: 0 !important;
+    }
+
+    .about_man {
+        h2 {
+            font-size: 5rem !important;
+        }
+    }
+
+    html {
+        font-size: 60% !important;
+    }
+
+}
+
+
+// tablet respnsive
+@media(max-width: 768px) {
+    html {
+        font-size: 58% !important;
+    }
+
+    header::before {
+        background-position: center top !important;
+        height: 43rem !important;
+        width: 40rem !important;
+    }
+
+    #about_sec {
+        .about_content {
+            margin: 1.5rem 0 0 0 !important;
+        }
+    }
+
+    figure::before {
+        display: none;
+    }
+
+    .contact_info {
+        margin-bottom: 6rem;
+    }
+
+    #full_footer form {
+        display: inline-block;
+        margin-bottom: 5.6rem;
+        width: 100%;
+    }
+
+    .about_man {
+        h2 {
+            font-size: 4rem !important;
+        }
+
+        span.man_profession {
+            font-size: 1.8rem !important;
+            padding: .8rem 2.6rem !important;
+        }
+    }
+}
+
+
+@media(max-width: 650px) {
+    .slide ul.slick-dots {
+        display: none !important;
+    }
+}
+
+
+// big mobile redponsive
+@media(max-width: 592px) {
+    html {
+        font-size: 56% !important;
+    }
+
+    a.navbar-brand {
+        margin-left: 25px;
+    }
+
+    .about_man {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            font-size: 2.8rem !important;
+        }
+
+        span.man_profession {
+            font-size: 1.7rem !important;
+        }
+    }
+}
+
+// standard mobile responsive
+@media(max-width: 420px) {
+    #btn.active {
+        transform: translateX(-159px);
+    }
+
+    header .about_man {
+        left: 50% !important;
+
+        h2 {
+            width: 100%;
+            margin-left: 0 !important;
+        }
+
+        span.man_profession {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+@media(max-width: 345px) {
+    .works_heading {
+        display: flex;
+        flex-wrap: wrap;
+
+        a#viewMore {
+            margin-top: 1.2rem;
+        }
+    }
+}

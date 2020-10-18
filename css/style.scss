@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import '_about.scss';
+@import '_services.scss';
+@import '_works.scss';
+@import '_hireme.scss';
+@import '_clients.scss';
+@import '_Latest_blog.scss';
+@import '_footer.scss';
+@import '_mediaquery.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+
+    h3 {
+        font-family: 'Russo One', sans-serif;
+    }
+}
+
+::selection {
+    background: rgba(233, 32, 79, .9);
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    position: relative;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url("../images/header_men.jpg");
+        height: 58rem;
+        width: 55rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        right: 9rem;
+        bottom: 0;
+    }
+
+    .scrollAnim {
+        margin-top: 1.6rem;
+        transition: margin-top .4s;
+    }
+
+    nav {
+        width: 100%;
+        height: 7rem;
+        position: fixed;
+        z-index: 999;
+        transition: .4s;
+
+        #btn {
+            color: #fff;
+            font-size: 3.2rem;
+            line-height: 7rem;
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+    // navfixed animation
+
+    .navAnim {
+        background: #fff;
+        width: 100%;
+        height: 7rem;
+        color: #101010;
+        box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .navAnim .scrollAnim {
+        margin-top: 0;
+    }
+
+    .navAnim .navbar-brand {
+        font-size: 2.6rem;
+    }
+
+    .navAnim ul {
+        margin: 0;
+    }
+
+    .navAnim .navbar-brand::before {
+        top: 5rem;
+    }
+
+    // menu scroll anim 
+
+
+    .navAnim .navbar-brand {
+        color: #000;
+    }
+
+    .navAnim #btn {
+        color: #101010;
+    }
+
+    .navAnim #nav li a {
+        color: #000;
+    }
+
+    .navAnim .navbar-brand::before {
+        background: #101010 !important;
+
+    }
+
+    .navAnim .navbar-brand::before {
+        background: #101010 !important;
+
+    }
+
+    .navAnim ul li a::before {
+        background: #101010;
+    }
+
+    // mouse down animation
+    .mouse {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .la-angle-down {
+            color: #fff;
+            font-size: 26px;
+            display: inline-block;
+            animation: mouseAnimate 2.5s infinite alternate;
+            
+        }   
+    }
+    @keyframes mouseAnimate {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(40px);
+        }
+    }
+
+    // mouse down animation
+
+}
+
+// navfixed animation
+
+.navbar-brand {
+    display: inline-block;
+    // font-size: 2.5rem;
+    font-size: 4rem;
+    line-height: 7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: .4s;
+
+    &:hover {
+        color: #fff;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: .2rem;
+        width: 50%;
+        background: #fff;
+        // top: 5rem;
+        top: 5.8rem;
+        /*<=== will be remove*/
+        animation: navbar-line 4s infinite;
+        transition: .4s;
+    }
+
+    @keyframes navbar-line {
+        0% {
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+
+        50% {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        51% {
+            transform-origin: right;
+            transform: scaleX(1);
+        }
+
+        100% {
+            transform-origin: right;
+            transform: scaleX(0);
+        }
+    }
+}
+
+ul {
+    margin-right: 3rem;
+    line-height: 7rem;
+    margin: 0;
+    float: right;
+    transition: .4s;
+
+    li {
+        list-style: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        transition: .4s;
+        margin: 0 1.6rem;
+        text-transform: uppercase;
+        display: inline-block;
+
+        a {
+            text-decoration: none !important;
+            position: relative;
+            color: #fff;
+            transition: .4s;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: .2rem;
+                width: 0;
+                top: 2.2rem;
+                background: #fff;
+            }
+        }
+
+        a:hover::before {
+            width: 100%;
+            animation: nav-hover .6s;
+
+            @keyframes nav-hover {
+                0% {
+                    transform-origin: left;
+                    transform: scaleX(0);
+                }
+
+                50% {
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+
+                51% {
+                    transform-origin: right;
+                    transform: scaleX(1);
+                }
+
+                100% {
+                    transform-origin: right;
+                    transform: scaleX(0);
+                }
+            }
+        }
+    }
+
+    li:last-child {
+        margin-right: 0;
+    }
+}
+
+.about_man {
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+
+    h2 {
+        font-size: 6.2rem;
+        font-weight: 300;
+        margin-left: 1rem;
+    }
+
+    span.man_profession {
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: .1rem;
+        padding: 1rem 2.8rem;
+        border-radius: .5rem;
+        background: #e9204f;
+        margin: 1.3rem 0 0 1rem;
+        display: inline-block;
+        position: relative;
+        z-index: 9;
+        overflow: hidden;
+    }
+}
